@@ -20,8 +20,8 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::resource('projects', \App\Http\Controllers\ProjectsController::class);
 
-    Route::post('/projects/{project}/tasks', [\App\Http\Controllers\TaskController::class, 'store']);
-    Route::patch('/projects/{project}/tasks/{task}', [\App\Http\Controllers\TaskController::class, 'update']);
+    Route::post('/projects/{project}/tasks', [\App\Http\Controllers\ProjectTasksController::class, 'store']);
+    Route::patch('/projects/{project}/tasks/{task}', [\App\Http\Controllers\ProjectTasksController::class, 'update']);
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
