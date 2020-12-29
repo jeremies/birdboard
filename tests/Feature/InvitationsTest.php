@@ -14,6 +14,8 @@ class InvitationsTest extends TestCase
     /** @test */
     public function a_project_can_invite_a_user()
     {
+        $this->withoutExceptionHandling();
+
         $project = ProjectFactory::create();
 
         $project->invite($newUser = User::factory()->create());
