@@ -19,7 +19,7 @@ class InvitationsTest extends TestCase
         $project->invite($newUser = User::factory()->create());
 
         $this->signIn($newUser);
-        $this->post(action('TasksController@store', $project), $task = ['body' => 'Foo task']);
+        $this->post(action([\App\Http\Controllers\TaskController::class, 'store'], $project), $task = ['body' => 'Foo task']);
 
         $this->assertDatabaseHas('tasks', $task);
     }
