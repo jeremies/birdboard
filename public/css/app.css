@@ -583,8 +583,7 @@ video {
 }
 
 .button {
-  --tw-bg-opacity: 1;
-  background-color: rgba(71, 205, 255, var(--tw-bg-opacity));
+  background-color: var(--button-background-color);
   border-radius: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -599,12 +598,12 @@ video {
 }
 
 .card {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  background-color: var(--card-background-color);
   border-radius: 0.5rem;
   padding: 1.25rem;
   --tw-shadow: 0 0 5px 0 rgba(0,0,0,0.8);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  color: var(--text-default-color);
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -2463,6 +2462,22 @@ video {
   background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
 }
 
+.bg-page {
+  background-color: var(--page-background-color);
+}
+
+.bg-card {
+  background-color: var(--card-background-color);
+}
+
+.bg-button {
+  background-color: var(--button-background-color);
+}
+
+.bg-header {
+  background-color: var(--header-background-color);
+}
+
 .group:hover .group-hover\:bg-transparent {
   background-color: transparent;
 }
@@ -2839,6 +2854,22 @@ video {
 .group:hover .group-hover\:bg-grey-light {
   --tw-bg-opacity: 1;
   background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-page {
+  background-color: var(--page-background-color);
+}
+
+.group:hover .group-hover\:bg-card {
+  background-color: var(--card-background-color);
+}
+
+.group:hover .group-hover\:bg-button {
+  background-color: var(--button-background-color);
+}
+
+.group:hover .group-hover\:bg-header {
+  background-color: var(--header-background-color);
 }
 
 .focus-within\:bg-transparent:focus-within {
@@ -3219,6 +3250,22 @@ video {
   background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
 }
 
+.focus-within\:bg-page:focus-within {
+  background-color: var(--page-background-color);
+}
+
+.focus-within\:bg-card:focus-within {
+  background-color: var(--card-background-color);
+}
+
+.focus-within\:bg-button:focus-within {
+  background-color: var(--button-background-color);
+}
+
+.focus-within\:bg-header:focus-within {
+  background-color: var(--header-background-color);
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -3597,6 +3644,22 @@ video {
   background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
 }
 
+.hover\:bg-page:hover {
+  background-color: var(--page-background-color);
+}
+
+.hover\:bg-card:hover {
+  background-color: var(--card-background-color);
+}
+
+.hover\:bg-button:hover {
+  background-color: var(--button-background-color);
+}
+
+.hover\:bg-header:hover {
+  background-color: var(--header-background-color);
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -3973,6 +4036,22 @@ video {
 .focus\:bg-grey-light:focus {
   --tw-bg-opacity: 1;
   background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+}
+
+.focus\:bg-page:focus {
+  background-color: var(--page-background-color);
+}
+
+.focus\:bg-card:focus {
+  background-color: var(--card-background-color);
+}
+
+.focus\:bg-button:focus {
+  background-color: var(--button-background-color);
+}
+
+.focus\:bg-header:focus {
+  background-color: var(--header-background-color);
 }
 
 .bg-none {
@@ -23355,6 +23434,10 @@ video {
   color: rgba(245, 246, 249, var(--tw-text-opacity));
 }
 
+.text-default {
+  color: var(--text-default-color);
+}
+
 .group:hover .group-hover\:text-transparent {
   color: transparent;
 }
@@ -23731,6 +23814,10 @@ video {
 .group:hover .group-hover\:text-grey-light {
   --tw-text-opacity: 1;
   color: rgba(245, 246, 249, var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-default {
+  color: var(--text-default-color);
 }
 
 .focus-within\:text-transparent:focus-within {
@@ -24111,6 +24198,10 @@ video {
   color: rgba(245, 246, 249, var(--tw-text-opacity));
 }
 
+.focus-within\:text-default:focus-within {
+  color: var(--text-default-color);
+}
+
 .hover\:text-transparent:hover {
   color: transparent;
 }
@@ -24489,6 +24580,10 @@ video {
   color: rgba(245, 246, 249, var(--tw-text-opacity));
 }
 
+.hover\:text-default:hover {
+  color: var(--text-default-color);
+}
+
 .focus\:text-transparent:focus {
   color: transparent;
 }
@@ -24865,6 +24960,10 @@ video {
 .focus\:text-grey-light:focus {
   --tw-text-opacity: 1;
   color: rgba(245, 246, 249, var(--tw-text-opacity));
+}
+
+.focus\:text-default:focus {
+  color: var(--text-default-color);
 }
 
 .text-opacity-0 {
@@ -29787,6 +29886,22 @@ video {
           animation: bounce 1s infinite;
 }
 
+.theme-light {
+  --page-background-color: #f5f6f9;
+  --card-background-color: white;
+  --button-background-color: #47cdff;
+  --header-background-color: white;
+  --text-default-color: black;
+}
+
+.theme-dark {
+  --page-background-color: #17181E;
+  --card-background-color: #1F2027;
+  --button-background-color: #49B6F9;
+  --header-background-color: #1F2027;
+  --text-default-color: #fff;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -31678,6 +31793,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .sm\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .sm\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .sm\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .sm\:bg-header {
+    background-color: var(--header-background-color);
+  }
+
   .group:hover .sm\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -32054,6 +32185,22 @@ video {
   .group:hover .sm\:group-hover\:bg-grey-light {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .group:hover .sm\:group-hover\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .group:hover .sm\:group-hover\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .group:hover .sm\:group-hover\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .group:hover .sm\:group-hover\:bg-header {
+    background-color: var(--header-background-color);
   }
 
   .sm\:focus-within\:bg-transparent:focus-within {
@@ -32434,6 +32581,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .sm\:focus-within\:bg-page:focus-within {
+    background-color: var(--page-background-color);
+  }
+
+  .sm\:focus-within\:bg-card:focus-within {
+    background-color: var(--card-background-color);
+  }
+
+  .sm\:focus-within\:bg-button:focus-within {
+    background-color: var(--button-background-color);
+  }
+
+  .sm\:focus-within\:bg-header:focus-within {
+    background-color: var(--header-background-color);
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -32812,6 +32975,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .sm\:hover\:bg-page:hover {
+    background-color: var(--page-background-color);
+  }
+
+  .sm\:hover\:bg-card:hover {
+    background-color: var(--card-background-color);
+  }
+
+  .sm\:hover\:bg-button:hover {
+    background-color: var(--button-background-color);
+  }
+
+  .sm\:hover\:bg-header:hover {
+    background-color: var(--header-background-color);
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -33188,6 +33367,22 @@ video {
   .sm\:focus\:bg-grey-light:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .sm\:focus\:bg-page:focus {
+    background-color: var(--page-background-color);
+  }
+
+  .sm\:focus\:bg-card:focus {
+    background-color: var(--card-background-color);
+  }
+
+  .sm\:focus\:bg-button:focus {
+    background-color: var(--button-background-color);
+  }
+
+  .sm\:focus\:bg-header:focus {
+    background-color: var(--header-background-color);
   }
 
   .sm\:bg-none {
@@ -52557,6 +52752,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .sm\:text-default {
+    color: var(--text-default-color);
+  }
+
   .group:hover .sm\:group-hover\:text-transparent {
     color: transparent;
   }
@@ -52933,6 +53132,10 @@ video {
   .group:hover .sm\:group-hover\:text-grey-light {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .group:hover .sm\:group-hover\:text-default {
+    color: var(--text-default-color);
   }
 
   .sm\:focus-within\:text-transparent:focus-within {
@@ -53313,6 +53516,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .sm\:focus-within\:text-default:focus-within {
+    color: var(--text-default-color);
+  }
+
   .sm\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -53691,6 +53898,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .sm\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .sm\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -54067,6 +54278,10 @@ video {
   .sm\:focus\:text-grey-light:focus {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .sm\:focus\:text-default:focus {
+    color: var(--text-default-color);
   }
 
   .sm\:text-opacity-0 {
@@ -60815,6 +61030,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .md\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .md\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .md\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .md\:bg-header {
+    background-color: var(--header-background-color);
+  }
+
   .group:hover .md\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -61191,6 +61422,22 @@ video {
   .group:hover .md\:group-hover\:bg-grey-light {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .group:hover .md\:group-hover\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .group:hover .md\:group-hover\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .group:hover .md\:group-hover\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .group:hover .md\:group-hover\:bg-header {
+    background-color: var(--header-background-color);
   }
 
   .md\:focus-within\:bg-transparent:focus-within {
@@ -61571,6 +61818,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .md\:focus-within\:bg-page:focus-within {
+    background-color: var(--page-background-color);
+  }
+
+  .md\:focus-within\:bg-card:focus-within {
+    background-color: var(--card-background-color);
+  }
+
+  .md\:focus-within\:bg-button:focus-within {
+    background-color: var(--button-background-color);
+  }
+
+  .md\:focus-within\:bg-header:focus-within {
+    background-color: var(--header-background-color);
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -61949,6 +62212,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .md\:hover\:bg-page:hover {
+    background-color: var(--page-background-color);
+  }
+
+  .md\:hover\:bg-card:hover {
+    background-color: var(--card-background-color);
+  }
+
+  .md\:hover\:bg-button:hover {
+    background-color: var(--button-background-color);
+  }
+
+  .md\:hover\:bg-header:hover {
+    background-color: var(--header-background-color);
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -62325,6 +62604,22 @@ video {
   .md\:focus\:bg-grey-light:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .md\:focus\:bg-page:focus {
+    background-color: var(--page-background-color);
+  }
+
+  .md\:focus\:bg-card:focus {
+    background-color: var(--card-background-color);
+  }
+
+  .md\:focus\:bg-button:focus {
+    background-color: var(--button-background-color);
+  }
+
+  .md\:focus\:bg-header:focus {
+    background-color: var(--header-background-color);
   }
 
   .md\:bg-none {
@@ -81694,6 +81989,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .md\:text-default {
+    color: var(--text-default-color);
+  }
+
   .group:hover .md\:group-hover\:text-transparent {
     color: transparent;
   }
@@ -82070,6 +82369,10 @@ video {
   .group:hover .md\:group-hover\:text-grey-light {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .group:hover .md\:group-hover\:text-default {
+    color: var(--text-default-color);
   }
 
   .md\:focus-within\:text-transparent:focus-within {
@@ -82450,6 +82753,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .md\:focus-within\:text-default:focus-within {
+    color: var(--text-default-color);
+  }
+
   .md\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -82828,6 +83135,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .md\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .md\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -83204,6 +83515,10 @@ video {
   .md\:focus\:text-grey-light:focus {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .md\:focus\:text-default:focus {
+    color: var(--text-default-color);
   }
 
   .md\:text-opacity-0 {
@@ -89952,6 +90267,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .lg\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .lg\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .lg\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .lg\:bg-header {
+    background-color: var(--header-background-color);
+  }
+
   .group:hover .lg\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -90328,6 +90659,22 @@ video {
   .group:hover .lg\:group-hover\:bg-grey-light {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .group:hover .lg\:group-hover\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .group:hover .lg\:group-hover\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .group:hover .lg\:group-hover\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .group:hover .lg\:group-hover\:bg-header {
+    background-color: var(--header-background-color);
   }
 
   .lg\:focus-within\:bg-transparent:focus-within {
@@ -90708,6 +91055,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .lg\:focus-within\:bg-page:focus-within {
+    background-color: var(--page-background-color);
+  }
+
+  .lg\:focus-within\:bg-card:focus-within {
+    background-color: var(--card-background-color);
+  }
+
+  .lg\:focus-within\:bg-button:focus-within {
+    background-color: var(--button-background-color);
+  }
+
+  .lg\:focus-within\:bg-header:focus-within {
+    background-color: var(--header-background-color);
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -91086,6 +91449,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .lg\:hover\:bg-page:hover {
+    background-color: var(--page-background-color);
+  }
+
+  .lg\:hover\:bg-card:hover {
+    background-color: var(--card-background-color);
+  }
+
+  .lg\:hover\:bg-button:hover {
+    background-color: var(--button-background-color);
+  }
+
+  .lg\:hover\:bg-header:hover {
+    background-color: var(--header-background-color);
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -91462,6 +91841,22 @@ video {
   .lg\:focus\:bg-grey-light:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .lg\:focus\:bg-page:focus {
+    background-color: var(--page-background-color);
+  }
+
+  .lg\:focus\:bg-card:focus {
+    background-color: var(--card-background-color);
+  }
+
+  .lg\:focus\:bg-button:focus {
+    background-color: var(--button-background-color);
+  }
+
+  .lg\:focus\:bg-header:focus {
+    background-color: var(--header-background-color);
   }
 
   .lg\:bg-none {
@@ -110831,6 +111226,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .lg\:text-default {
+    color: var(--text-default-color);
+  }
+
   .group:hover .lg\:group-hover\:text-transparent {
     color: transparent;
   }
@@ -111207,6 +111606,10 @@ video {
   .group:hover .lg\:group-hover\:text-grey-light {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .group:hover .lg\:group-hover\:text-default {
+    color: var(--text-default-color);
   }
 
   .lg\:focus-within\:text-transparent:focus-within {
@@ -111587,6 +111990,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .lg\:focus-within\:text-default:focus-within {
+    color: var(--text-default-color);
+  }
+
   .lg\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -111965,6 +112372,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .lg\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .lg\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -112341,6 +112752,10 @@ video {
   .lg\:focus\:text-grey-light:focus {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .lg\:focus\:text-default:focus {
+    color: var(--text-default-color);
   }
 
   .lg\:text-opacity-0 {
@@ -119089,6 +119504,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .xl\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .xl\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .xl\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .xl\:bg-header {
+    background-color: var(--header-background-color);
+  }
+
   .group:hover .xl\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -119465,6 +119896,22 @@ video {
   .group:hover .xl\:group-hover\:bg-grey-light {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .group:hover .xl\:group-hover\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .group:hover .xl\:group-hover\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .group:hover .xl\:group-hover\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .group:hover .xl\:group-hover\:bg-header {
+    background-color: var(--header-background-color);
   }
 
   .xl\:focus-within\:bg-transparent:focus-within {
@@ -119845,6 +120292,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .xl\:focus-within\:bg-page:focus-within {
+    background-color: var(--page-background-color);
+  }
+
+  .xl\:focus-within\:bg-card:focus-within {
+    background-color: var(--card-background-color);
+  }
+
+  .xl\:focus-within\:bg-button:focus-within {
+    background-color: var(--button-background-color);
+  }
+
+  .xl\:focus-within\:bg-header:focus-within {
+    background-color: var(--header-background-color);
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -120223,6 +120686,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .xl\:hover\:bg-page:hover {
+    background-color: var(--page-background-color);
+  }
+
+  .xl\:hover\:bg-card:hover {
+    background-color: var(--card-background-color);
+  }
+
+  .xl\:hover\:bg-button:hover {
+    background-color: var(--button-background-color);
+  }
+
+  .xl\:hover\:bg-header:hover {
+    background-color: var(--header-background-color);
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -120599,6 +121078,22 @@ video {
   .xl\:focus\:bg-grey-light:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .xl\:focus\:bg-page:focus {
+    background-color: var(--page-background-color);
+  }
+
+  .xl\:focus\:bg-card:focus {
+    background-color: var(--card-background-color);
+  }
+
+  .xl\:focus\:bg-button:focus {
+    background-color: var(--button-background-color);
+  }
+
+  .xl\:focus\:bg-header:focus {
+    background-color: var(--header-background-color);
   }
 
   .xl\:bg-none {
@@ -139968,6 +140463,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .xl\:text-default {
+    color: var(--text-default-color);
+  }
+
   .group:hover .xl\:group-hover\:text-transparent {
     color: transparent;
   }
@@ -140344,6 +140843,10 @@ video {
   .group:hover .xl\:group-hover\:text-grey-light {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .group:hover .xl\:group-hover\:text-default {
+    color: var(--text-default-color);
   }
 
   .xl\:focus-within\:text-transparent:focus-within {
@@ -140724,6 +141227,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .xl\:focus-within\:text-default:focus-within {
+    color: var(--text-default-color);
+  }
+
   .xl\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -141102,6 +141609,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .xl\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .xl\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -141478,6 +141989,10 @@ video {
   .xl\:focus\:text-grey-light:focus {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .xl\:focus\:text-default:focus {
+    color: var(--text-default-color);
   }
 
   .xl\:text-opacity-0 {
@@ -148226,6 +148741,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .\32xl\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .\32xl\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .\32xl\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .\32xl\:bg-header {
+    background-color: var(--header-background-color);
+  }
+
   .group:hover .\32xl\:group-hover\:bg-transparent {
     background-color: transparent;
   }
@@ -148602,6 +149133,22 @@ video {
   .group:hover .\32xl\:group-hover\:bg-grey-light {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .group:hover .\32xl\:group-hover\:bg-page {
+    background-color: var(--page-background-color);
+  }
+
+  .group:hover .\32xl\:group-hover\:bg-card {
+    background-color: var(--card-background-color);
+  }
+
+  .group:hover .\32xl\:group-hover\:bg-button {
+    background-color: var(--button-background-color);
+  }
+
+  .group:hover .\32xl\:group-hover\:bg-header {
+    background-color: var(--header-background-color);
   }
 
   .\32xl\:focus-within\:bg-transparent:focus-within {
@@ -148982,6 +149529,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .\32xl\:focus-within\:bg-page:focus-within {
+    background-color: var(--page-background-color);
+  }
+
+  .\32xl\:focus-within\:bg-card:focus-within {
+    background-color: var(--card-background-color);
+  }
+
+  .\32xl\:focus-within\:bg-button:focus-within {
+    background-color: var(--button-background-color);
+  }
+
+  .\32xl\:focus-within\:bg-header:focus-within {
+    background-color: var(--header-background-color);
+  }
+
   .\32xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -149360,6 +149923,22 @@ video {
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
   }
 
+  .\32xl\:hover\:bg-page:hover {
+    background-color: var(--page-background-color);
+  }
+
+  .\32xl\:hover\:bg-card:hover {
+    background-color: var(--card-background-color);
+  }
+
+  .\32xl\:hover\:bg-button:hover {
+    background-color: var(--button-background-color);
+  }
+
+  .\32xl\:hover\:bg-header:hover {
+    background-color: var(--header-background-color);
+  }
+
   .\32xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -149736,6 +150315,22 @@ video {
   .\32xl\:focus\:bg-grey-light:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(245, 246, 249, var(--tw-bg-opacity));
+  }
+
+  .\32xl\:focus\:bg-page:focus {
+    background-color: var(--page-background-color);
+  }
+
+  .\32xl\:focus\:bg-card:focus {
+    background-color: var(--card-background-color);
+  }
+
+  .\32xl\:focus\:bg-button:focus {
+    background-color: var(--button-background-color);
+  }
+
+  .\32xl\:focus\:bg-header:focus {
+    background-color: var(--header-background-color);
   }
 
   .\32xl\:bg-none {
@@ -169105,6 +169700,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .\32xl\:text-default {
+    color: var(--text-default-color);
+  }
+
   .group:hover .\32xl\:group-hover\:text-transparent {
     color: transparent;
   }
@@ -169481,6 +170080,10 @@ video {
   .group:hover .\32xl\:group-hover\:text-grey-light {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .group:hover .\32xl\:group-hover\:text-default {
+    color: var(--text-default-color);
   }
 
   .\32xl\:focus-within\:text-transparent:focus-within {
@@ -169861,6 +170464,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .\32xl\:focus-within\:text-default:focus-within {
+    color: var(--text-default-color);
+  }
+
   .\32xl\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -170239,6 +170846,10 @@ video {
     color: rgba(245, 246, 249, var(--tw-text-opacity));
   }
 
+  .\32xl\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .\32xl\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -170615,6 +171226,10 @@ video {
   .\32xl\:focus\:text-grey-light:focus {
     --tw-text-opacity: 1;
     color: rgba(245, 246, 249, var(--tw-text-opacity));
+  }
+
+  .\32xl\:focus\:text-default:focus {
+    color: var(--text-default-color);
   }
 
   .\32xl\:text-opacity-0 {

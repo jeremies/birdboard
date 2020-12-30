@@ -34,11 +34,7 @@ class ManageProjectsTest extends TestCase
 
         $this->get('/projects/create')->assertStatus(200);
 
-        $attributes = [
-            'title' => $this->faker->sentence,
-            'description' => $this->faker->sentence,
-            'notes' => 'General notes'
-        ];
+        $attributes = Project::factory()->raw(['owner_id' => auth()->id()]);
 
         $response = $this->post('/projects', $attributes);
 
@@ -68,9 +64,15 @@ class ManageProjectsTest extends TestCase
         $this->delete($project->path())
             ->assertRedirect('login');
 
-        $this->signIn();
+        $user = $this->signIn();
 
         $this->delete($project->path())
+            ->assertStatus(403);
+
+        $project->invite($user);
+
+        $this->actingAs($user)
+            ->delete($project->path())
             ->assertStatus(403);
     }
 

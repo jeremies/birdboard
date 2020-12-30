@@ -3,7 +3,7 @@
 @section('content')
     <header class="flex items-center mb-3 py-4">
         <div class="flex justify-between items-end w-full">
-            <p class="text-gray-400 text-sm">
+            <p class="text-default text-sm">
                 <a href="/projects">My Projects</a> / {{ $project->title }}
             </p>
 
@@ -25,7 +25,7 @@
         <div class="lg:flex -mx-3">
             <div class="lg:w-3/4 px-3">
                 <div class="mb-8">
-                    <h2 class="text-lg text-gray-400 font-normal mb-3">Tasks</h2>
+                    <h2 class="text-lg text-default font-normal mb-3">Tasks</h2>
 
                     @foreach($project->tasks as $task)
                         <div class="card mb-3">
@@ -35,7 +35,7 @@
 
                                 <div class="flex">
                                     <input name="body" value="{{ $task->body }}"
-                                           class="w-full {{ $task->completed ? "text-gray-400" : "" }}">
+                                           class="bg-card w-full {{ $task->completed ? "text-default" : "" }}">
                                     <input name="completed" type="checkbox"
                                            onChange="this.form.submit()" {{ $task->completed ? "checked" : '' }}>
                                 </div>
@@ -46,13 +46,13 @@
                         <form action="{{ $project->path() . '/tasks' }}" method="POST">
                             @csrf
 
-                            <input class="w-full" placeholder="Add a new task..." name="body">
+                            <input class="bg-card w-full" placeholder="Add a new task..." name="body">
                         </form>
                     </div>
                 </div>
 
                 <div class="mb-8">
-                    <h2 class="text-lg text-gray-400 font-normal mb-3">General Notes</h2>
+                    <h2 class="text-lg text-default font-normal mb-3">General Notes</h2>
 
                     <form method="POST" action="{{ $project->path() }}">
                         @method('PATCH')
@@ -65,13 +65,7 @@
                     </form>
 
 
-                    @if ($errors->any())
-                        <div class="field mt-6">
-                            @foreach ($errors->all() as $error)
-                                <li class="text-sm text-red-600">{{ $error }}</li>
-                            @endforeach
-                        </div>
-                    @endif
+                    @include('errors')
 
                 </div>
             </div>
@@ -79,6 +73,10 @@
                 @include('projects.card')
 
                 @include('projects.activity.card')
+
+                @can ('manage', $project)
+                    @include('projects.invite')
+                @endcan
             </div>
         </div>
     </main>

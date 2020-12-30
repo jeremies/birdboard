@@ -14,7 +14,16 @@ module.exports = {
                 'grey-light': '#F5F6F9',
                 'blue': '#47cdff'
             },
-        },
+            textColor: {
+                'default': 'var(--text-default-color)'
+            },
+            backgroundColor: {
+                'page': 'var(--page-background-color)',
+                'card': 'var(--card-background-color)',
+                'button': 'var(--button-background-color)',
+                'header': 'var(--header-background-color)'
+            }
+        }
     },
     variants: {
         extend: {},
