@@ -9,10 +9,23 @@
         box-shadow: 0 2px 7px 0 #b0eaff;
     }
 
+    .button.is-outlined {
+        @apply bg-card border border-blue text-blue;
+    }
+
     .card {
         @apply bg-card rounded-lg shadow p-5;
         color: var(--text-default-color);
     }
+
+    .dropdown-menu-link {
+        @apply block text-default no-underline text-sm leading-loose px-4;
+    }
+
+    .dropdown-menu-link:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+
 }
 
 .theme-light {
@@ -22,6 +35,7 @@
     --header-background-color: white;
 
     --text-default-color: black;
+    --text-error-color: red;
 }
 
 .theme-dark {

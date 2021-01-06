@@ -12,7 +12,8 @@ module.exports = {
             },
             colors: {
                 'grey-light': '#F5F6F9',
-                'blue': '#47cdff'
+                'blue': '#47cdff',
+                'error': 'var(--text-error-color)'
             },
             textColor: {
                 'default': 'var(--text-default-color)'

@@ -28,7 +28,7 @@
 
                 <div>
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto flex items-center mr-8">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -43,11 +43,25 @@
                                 </li>
                             @endif
                         @else
+                            <theme-switcher></theme-switcher>
+
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                                <dropdown align="right" width="200px">
+                                    <template v-slot:trigger>
+                                        <button id="navbarDropdown" class="nav-link dropdown-toggle focus:outline-none"
+                                                href="#"
+                                                v-pre>
+                                            {{ Auth::user()->name }}
+                                        </button>
+                                    </template>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                        @csrf
+
+                                        <button type="submit" class="dropdown-menu-link w-full text-left">Logout
+                                        </button>
+                                    </form>
+                                </dropdown>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -56,9 +70,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+
                                 </div>
                             </li>
                         @endguest
